@@ -12,13 +12,10 @@ console.log(slice());
 
 //Function #2: Array Splice
 
-function splice() {
 
-    return foods.splice(2, 0, 'noodles', 'icecream');
+    foods.splice(2, 0, 'noodles', 'icecream');
 
-}
-splice();
-console.log("Extra Food items=>" + foods);
+console.log("Using Splice=>" + foods);
 //Expected output: [pizza, burger, noodles, icecream, fingerShips, donuts, springRoll];
 
 //Function #3: Filter
@@ -89,5 +86,11 @@ function multiply(myArray) {
     }, 1);
 
 }
-
 console.log("Multiplication=>" + multiply(numbers));
+
+let newArray = myArray.map(function findSquareOfNumbers(myArray) {
+    return (myArray * myArray);
+}).reduce(function multiply(initial, myArray) {
+    return (initial * myArray);
+}, 1);
+console.log("Using Map and reduce=> "+newArray);
